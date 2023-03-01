@@ -189,8 +189,24 @@ a.link {
     color: var(--10);
 }
 
+a.nosub {
+    text-decoration: none;
+}
+
 a:visited.link {
     color: var(--8);
+}
+
+div.social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    div.social {
+        flex-direction: column;
+    }
 }
 
 .cookieadvise {
