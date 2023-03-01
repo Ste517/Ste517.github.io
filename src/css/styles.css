@@ -194,24 +194,31 @@ a:visited.link {
 }
 
 .cookieadvise {
+    width: 100%;
     background-color: var(--1);
-    padding: 16px;
-    position: fixed;
+    padding: 25px;
+    position: absolute;
     bottom: 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-end;
 }
 
-.cookieadvise span {
-    padding: 10px 10px;
+.cookieadvise span:first-of-type {
+    max-width: 60%;
 }
 
 .cookieadvise button {
+    position: absolute;
+    right: 15px;
+    margin: auto 0;
+    vertical-align: middle;
     background-color: var(--4); 
     border: none;
     color: var(--10);
     padding: 10px 10px;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 16px;
 }
 
@@ -225,4 +232,8 @@ table.rounded-table td{
     border: 1px solid;
     border-radius: 5px;
     border-collapse: collapse;
+}
+
+.center {
+    text-align: center;
 }
