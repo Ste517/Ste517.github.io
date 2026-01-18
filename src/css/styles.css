@@ -253,3 +253,22 @@ table.rounded-table td{
 .center {
     text-align: center;
 }
+
+footer {
+    text-align: center;
+    padding: 15px;
+    font-size: 0.8em;
+    color: var(--10);
+    margin-top: 40px;
+    position: relative;
+    bottom: 0;
+}
+
+footer a {
+    color: var(--9);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

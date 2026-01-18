@@ -1,0 +1,47 @@
+# GitHub Pages - Jekyll build artifacts
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# GitHub Pages - Bundler
+.bundle/
+vendor/
+Gemfile.lock
+
+# Ruby
+*.gem
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Node (se usi npm per qualche tool)
+node_modules/
+package-lock.json
