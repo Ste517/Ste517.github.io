@@ -22,13 +22,6 @@ nav_order: 2
 ### Università di Pisa
 **Laurea in Ingegneria Informatica** | 2025 - In corso
 
-Corsi che sto seguendo:
-- Algebra Lineare
-- Fondamenti di Programmazione
-
-Corsi che ho seguito:
-- Analisi Matematica 1
-
 ### Liceo Scientifico Enrico Fermi, Cecina
 **Diploma di Maturità Scientifica** | 2020 - 2025
 
