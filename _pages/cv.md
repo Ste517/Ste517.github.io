@@ -31,17 +31,18 @@ nav_order: 2
 
 ### Linguaggi di Programmazione/Markup
 - **Python** - Livello avanzato
-- **C++** - Sviluppo applicazioni semplici (CLI) e GUI in fase di apprendimento
+- **C++** - Sviluppo applicazioni (CLI e GUI)
 - **HTML/CSS/JavaScript** - Sviluppo web
 - **LaTeX** - Scrittura di appunti di materie STEM
-- **SQL** - Database relazionali (ancora in fase di apprendimento)
+- **SQL** - Database relazionali
 
 ### Framework e Tecnologie
 - Django
 - Git & GitHub
 - PostgreSQL
+- SQLite
 - Linux (Mint, Ubuntu)
-- Qt (Livello base)
+- Qt
 
 ### Strumenti di Sviluppo
 - VSCode
@@ -92,4 +93,4 @@ Progetto in corso per ricreare da zero funzionalità di librerie standard come `
 
 ---
 
-*Ultimo aggiornamento: Gennaio 2026*
+*Ultimo aggiornamento: Aprile 2026*
