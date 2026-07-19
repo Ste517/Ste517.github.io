@@ -14,6 +14,7 @@ nav_order: 2
 **LinkedIn:** [linkedin.com/in/stefano-brogi-iinf](https://www.linkedin.com/in/stefano-brogi-iinf/)  
 **GitHub:** [github.com/Ste517](https://github.com/Ste517)  
 **Instagram** [instagram.com/stefanobrogi07](https://www.instagram.com/stefanobrogi07)
+**YouTube** [youtube.com/@ste517](https://www.youtube.com/@ste517)
 
 ---
 
