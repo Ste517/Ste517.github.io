@@ -89,8 +89,9 @@ Progetto in corso per ricreare da zero funzionalità di librerie standard come `
 ## Interessi e Hobby
 
 - **Ciclismo** - Mi piace molto andare in bici, specialmente con gli amici
-- **Musica** - Suono la chitarra dal 2018, appassionato di musica rock, dance anni '90, e pop anni 2000.
+- **Musica** - Suono la chitarra dal 2018, appassionato di musica rock, dance anni '90, e rap anni 2000.
+- **Fotografia** - Mi piace molto scattare foto: adoro catturare momenti durante gli eventi, ma soprattutto fotografare la natura, i musei e tutto ciò che attira la mia attenzione.
 
 ---
 
-*Ultimo aggiornamento: Aprile 2026*
+*Ultimo aggiornamento: Luglio 2026*
