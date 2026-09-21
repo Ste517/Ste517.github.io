@@ -4,11 +4,127 @@ title: Blog
 navigation: true
 nav_order: 3
 ---
-<h1>Post del blog</h1>
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
+
+<div class="blog-container">
+  <h1>Post del blog</h1>
+
+  {% if site.posts.size > 0 %}
+    {% assign latest = site.posts.first %}
+    {% assign l_day = latest.date | date: "%d" %}
+    {% assign l_month = latest.date | date: "%m" %}
+    {% assign l_year = latest.date | date: "%Y" %}
+    {% case l_month %}
+      {% when '01' %}{% assign l_month_name = 'Gennaio' %}
+      {% when '02' %}{% assign l_month_name = 'Febbraio' %}
+      {% when '03' %}{% assign l_month_name = 'Marzo' %}
+      {% when '04' %}{% assign l_month_name = 'Aprile' %}
+      {% when '05' %}{% assign l_month_name = 'Maggio' %}
+      {% when '06' %}{% assign l_month_name = 'Giugno' %}
+      {% when '07' %}{% assign l_month_name = 'Luglio' %}
+      {% when '08' %}{% assign l_month_name = 'Agosto' %}
+      {% when '09' %}{% assign l_month_name = 'Settembre' %}
+      {% when '10' %}{% assign l_month_name = 'Ottobre' %}
+      {% when '11' %}{% assign l_month_name = 'Novembre' %}
+      {% when '12' %}{% assign l_month_name = 'Dicembre' %}
+    {% endcase %}
+
+    <section class="featured-post-section">
+      <div class="featured-post-card">
+        <span class="featured-badge">Ultimo post</span>
+        <h2 class="featured-title">
+          <a href="{{ latest.url | relative_url }}">{{ latest.title }}</a>
+        </h2>
+        <div class="featured-meta">
+          <time datetime="{{ latest.date | date_to_xmlschema }}">{{ l_day }} {{ l_month_name }} {{ l_year }}</time>
+          {% if latest.categories.size > 0 %}
+            <span>•</span>
+            <span>{{ latest.categories | join: ", " }}</span>
+          {% endif %}
+        </div>
+        {% if latest.content %}
+          <p class="featured-excerpt">
+            {{ latest.content | strip_html | truncatewords: 35 }}
+          </p>
+        {% endif %}
+        <a href="{{ latest.url | relative_url }}" class="featured-btn">Leggi articolo &rarr;</a>
+      </div>
+    </section>
+
+    {% if site.posts.size > 1 %}
+      <section class="blog-archive-section">
+        <h2 class="blog-archive-heading">Altri post</h2>
+
+        {% assign current_year = "" %}
+        {% assign current_month = "" %}
+
+        {% for post in site.posts offset: 1 %}
+          {% assign post_year = post.date | date: "%Y" %}
+          {% assign post_month = post.date | date: "%m" %}
+          {% assign post_day = post.date | date: "%d" %}
+
+          {% case post_month %}
+            {% when '01' %}{% assign month_name = 'Gennaio' %}
+            {% when '02' %}{% assign month_name = 'Febbraio' %}
+            {% when '03' %}{% assign month_name = 'Marzo' %}
+            {% when '04' %}{% assign month_name = 'Aprile' %}
+            {% when '05' %}{% assign month_name = 'Maggio' %}
+            {% when '06' %}{% assign month_name = 'Giugno' %}
+            {% when '07' %}{% assign month_name = 'Luglio' %}
+            {% when '08' %}{% assign month_name = 'Agosto' %}
+            {% when '09' %}{% assign month_name = 'Settembre' %}
+            {% when '10' %}{% assign month_name = 'Ottobre' %}
+            {% when '11' %}{% assign month_name = 'Novembre' %}
+            {% when '12' %}{% assign month_name = 'Dicembre' %}
+          {% endcase %}
+
+          {% if post_year != current_year %}
+            {% if current_year != "" %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+            {% assign current_year = post_year %}
+            {% assign current_month = post_month %}
+            <div class="blog-year-group">
+              <h3 class="blog-year-title">{{ post_year }}</h3>
+              <div class="blog-month-group">
+                <h4 class="blog-month-title">{{ month_name }}</h4>
+                <ul class="blog-post-list">
+          {% elsif post_month != current_month %}
+            {% if current_month != "" %}
+                </ul>
+              </div>
+            {% endif %}
+            {% assign current_month = post_month %}
+            <div class="blog-month-group">
+              <h4 class="blog-month-title">{{ month_name }}</h4>
+              <ul class="blog-post-list">
+          {% endif %}
+
+            <li class="blog-post-item">
+              <div class="blog-post-meta">
+                <time datetime="{{ post.date | date_to_xmlschema }}">{{ post_day }} {{ month_name }}</time>
+                {% if post.categories.size > 0 %}
+                  <span>• {{ post.categories | join: ", " }}</span>
+                {% endif %}
+              </div>
+              <a class="blog-post-title-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+              {% if post.content %}
+                <p class="blog-post-excerpt">{{ post.content | strip_html | truncatewords: 22 }}</p>
+              {% endif %}
+            </li>
+
+        {% endfor %}
+
+        {% if current_year != "" %}
+                </ul>
+              </div>
+            </div>
+        {% endif %}
+      </section>
+    {% endif %}
+
+  {% else %}
+    <p>Nessun post pubblicato al momento.</p>
+  {% endif %}
+</div>
