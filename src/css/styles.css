@@ -245,6 +245,10 @@ table.rounded-table td{
     text-align: center;
 }
 
+main {
+    min-height: 100vh;
+}
+
 footer {
     display: inline-block;
     text-align: center;
